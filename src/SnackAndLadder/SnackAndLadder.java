@@ -28,9 +28,14 @@ public class SnackAndLadder {
                     temp = player1 - dice;
                     break;
             }
-            player1 = player1 + temp;
+            player1 = player1 + (temp);
             if (player1 < 0)
                 player1 = 0;
+            if (player1>100)
+                player1 = player1-temp;
+            if(player1==100)
+                player1=100;
+
         }
         System.out.println(player1);
         if (player1 == 100)
